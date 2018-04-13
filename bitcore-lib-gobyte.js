@@ -2,7 +2,7 @@ require=(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof requ
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 var errors = require('./errors');
 var Base58Check = require('./encoding/base58check');
@@ -500,11 +500,11 @@ module.exports = Address;
 var Script = require('./script');
 
 }).call(this,require("buffer").Buffer)
-},{"./crypto/hash":8,"./encoding/base58check":13,"./errors":17,"./networks":25,"./publickey":28,"./script":29,"./util/js":47,"./util/preconditions":48,"buffer":118,"logobyte":192}],2:[function(require,module,exports){
+},{"./crypto/hash":8,"./encoding/base58check":13,"./errors":17,"./networks":25,"./publickey":28,"./script":29,"./util/js":47,"./util/preconditions":48,"buffer":118,"lodash":192}],2:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var BlockHeader = require('./blockheader');
 var BN = require('../crypto/bn');
 var BufferUtil = require('../util/buffer');
@@ -785,11 +785,11 @@ Block.Values = {
 module.exports = Block;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":6,"../crypto/hash":8,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../transaction":32,"../util/buffer":46,"../util/preconditions":48,"./blockheader":3,"buffer":118,"logobyte":192}],3:[function(require,module,exports){
+},{"../crypto/bn":6,"../crypto/hash":8,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../transaction":32,"../util/buffer":46,"../util/preconditions":48,"./blockheader":3,"buffer":118,"lodash":192}],3:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var BN = require('../crypto/bn');
 var BufferUtil = require('../util/buffer');
 var BufferReader = require('../encoding/bufferreader');
@@ -1086,7 +1086,7 @@ BlockHeader.Constants = {
 module.exports = BlockHeader;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":6,"../crypto/hash":8,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"buffer":118,"logobyte":192}],4:[function(require,module,exports){
+},{"../crypto/bn":6,"../crypto/hash":8,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"buffer":118,"lodash":192}],4:[function(require,module,exports){
 module.exports = require('./block');
 
 module.exports.BlockHeader = require('./blockheader');
@@ -1096,7 +1096,7 @@ module.exports.MerkleBlock = require('./merkleblock');
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var BlockHeader = require('./blockheader');
 var BufferUtil = require('../util/buffer');
 var BufferReader = require('../encoding/bufferreader');
@@ -1368,13 +1368,13 @@ MerkleBlock.fromObject = function fromObject(obj) {
 module.exports = MerkleBlock;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/hash":8,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../transaction":32,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"./blockheader":3,"buffer":118,"logobyte":192}],6:[function(require,module,exports){
+},{"../crypto/hash":8,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../transaction":32,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"./blockheader":3,"buffer":118,"lodash":192}],6:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
 var BN = require('bn.js');
 var $ = require('../util/preconditions');
-var _ = require('logobyte');
+var _ = require('lodash');
 
 var reversebuf = function(buf) {
   var buf2 = new Buffer(buf.length);
@@ -1574,7 +1574,7 @@ BN.pad = function(buf, natlen, size) {
 module.exports = BN;
 
 }).call(this,require("buffer").Buffer)
-},{"../util/preconditions":48,"bn.js":67,"buffer":118,"logobyte":192}],7:[function(require,module,exports){
+},{"../util/preconditions":48,"bn.js":67,"buffer":118,"lodash":192}],7:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -1585,7 +1585,7 @@ var PublicKey = require('../publickey');
 var Random = require('./random');
 var Hash = require('./hash');
 var BufferUtil = require('../util/buffer');
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 
 var ECDSA = function ECDSA(obj) {
@@ -1874,7 +1874,7 @@ ECDSA.verify = function(hashbuf, sig, pubkey, endian) {
 module.exports = ECDSA;
 
 }).call(this,require("buffer").Buffer)
-},{"../publickey":28,"../util/buffer":46,"../util/preconditions":48,"./bn":6,"./hash":8,"./point":9,"./random":10,"./signature":11,"buffer":118,"logobyte":192}],8:[function(require,module,exports){
+},{"../publickey":28,"../util/buffer":46,"../util/preconditions":48,"./bn":6,"./hash":8,"./point":9,"./random":10,"./signature":11,"buffer":118,"lodash":192}],8:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -2185,7 +2185,7 @@ module.exports = Random;
 'use strict';
 
 var BN = require('./bn');
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var BufferUtil = require('../util/buffer');
 var JSUtil = require('../util/js');
@@ -2496,11 +2496,11 @@ Signature.SIGHASH_ANYONECANPAY = 0x80;
 module.exports = Signature;
 
 }).call(this,require("buffer").Buffer)
-},{"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"./bn":6,"buffer":118,"logobyte":192}],12:[function(require,module,exports){
+},{"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"./bn":6,"buffer":118,"lodash":192}],12:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var bs58 = require('bs58');
 var buffer = require('buffer');
 
@@ -2570,11 +2570,11 @@ Base58.prototype.toString = function() {
 module.exports = Base58;
 
 }).call(this,require("buffer").Buffer)
-},{"bs58":115,"buffer":118,"logobyte":192}],13:[function(require,module,exports){
+},{"bs58":115,"buffer":118,"lodash":192}],13:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var Base58 = require('./base58');
 var buffer = require('buffer');
 var sha256sha256 = require('../crypto/hash').sha256sha256;
@@ -2669,11 +2669,11 @@ Base58Check.prototype.toString = function() {
 module.exports = Base58Check;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/hash":8,"./base58":12,"buffer":118,"logobyte":192}],14:[function(require,module,exports){
+},{"../crypto/hash":8,"./base58":12,"buffer":118,"lodash":192}],14:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var BufferUtil = require('../util/buffer');
 var BN = require('../crypto/bn');
@@ -2871,7 +2871,7 @@ BufferReader.prototype.readReverse = function(len) {
 module.exports = BufferReader;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":6,"../util/buffer":46,"../util/preconditions":48,"buffer":118,"logobyte":192}],15:[function(require,module,exports){
+},{"../crypto/bn":6,"../util/buffer":46,"../util/preconditions":48,"buffer":118,"lodash":192}],15:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -3105,7 +3105,7 @@ module.exports = Varint;
 },{"../crypto/bn":6,"./bufferreader":14,"./bufferwriter":15,"buffer":118}],17:[function(require,module,exports){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 
 function format(message, args) {
   return message
@@ -3165,7 +3165,7 @@ module.exports.extend = function(spec) {
   return traverseNode(bitcore.Error, spec);
 };
 
-},{"./spec":18,"logobyte":192}],18:[function(require,module,exports){
+},{"./spec":18,"lodash":192}],18:[function(require,module,exports){
 'use strict';
 
 var docsURL = 'http://bitcore.io/';
@@ -3379,7 +3379,7 @@ module.exports = [{
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var buffer = require('buffer');
 var compare = Buffer.compare || require('buffer-compare');
@@ -3585,7 +3585,7 @@ GovObject.shallowCopy = function(govObject) {
 module.exports = GovObject;
 
 }).call(this,require("buffer").Buffer)
-},{"../address":1,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../errors":17,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"buffer":118,"buffer-compare":116,"logobyte":192}],20:[function(require,module,exports){
+},{"../address":1,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../errors":17,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"buffer":118,"buffer-compare":116,"lodash":192}],20:[function(require,module,exports){
 module.exports = require('./govobject');
 
 module.exports.Proposal = require('./types/proposal');
@@ -3593,7 +3593,7 @@ module.exports.Proposal = require('./types/proposal');
 },{"./govobject":19,"./types/proposal":21}],21:[function(require,module,exports){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('../../util/preconditions');
 var GovObject = require('../govobject');
 var errors = require('../../errors');
@@ -3761,14 +3761,14 @@ Proposal.prototype.getSerializationError = function(opts) {
 
 module.exports = Proposal;
 
-},{"../../errors":17,"../../util/preconditions":48,"../govobject":19,"logobyte":192,"util":260}],22:[function(require,module,exports){
+},{"../../errors":17,"../../util/preconditions":48,"../govobject":19,"lodash":192,"util":260}],22:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
 
 var assert = require('assert');
 var buffer = require('buffer');
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 
 var BN = require('./crypto/bn');
@@ -4411,11 +4411,11 @@ assert(HDPrivateKey.ChecksumEnd === HDPrivateKey.SerializedByteSize);
 module.exports = HDPrivateKey;
 
 }).call(this,require("buffer").Buffer)
-},{"./crypto/bn":6,"./crypto/hash":8,"./crypto/point":9,"./crypto/random":10,"./encoding/base58":12,"./encoding/base58check":13,"./errors":17,"./hdpublickey":23,"./networks":25,"./privatekey":27,"./util/buffer":46,"./util/js":47,"./util/preconditions":48,"assert":64,"buffer":118,"logobyte":192}],23:[function(require,module,exports){
+},{"./crypto/bn":6,"./crypto/hash":8,"./crypto/point":9,"./crypto/random":10,"./encoding/base58":12,"./encoding/base58check":13,"./errors":17,"./hdpublickey":23,"./networks":25,"./privatekey":27,"./util/buffer":46,"./util/js":47,"./util/preconditions":48,"assert":64,"buffer":118,"lodash":192}],23:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 
 var BN = require('./crypto/bn');
@@ -4911,11 +4911,11 @@ assert(HDPublicKey.ChecksumEnd === HDPublicKey.SerializedByteSize);
 module.exports = HDPublicKey;
 
 }).call(this,require("buffer").Buffer)
-},{"./crypto/bn":6,"./crypto/hash":8,"./crypto/point":9,"./encoding/base58":12,"./encoding/base58check":13,"./errors":17,"./hdprivatekey":22,"./networks":25,"./publickey":28,"./util/buffer":46,"./util/js":47,"./util/preconditions":48,"assert":64,"buffer":118,"logobyte":192}],24:[function(require,module,exports){
+},{"./crypto/bn":6,"./crypto/hash":8,"./crypto/point":9,"./encoding/base58":12,"./encoding/base58check":13,"./errors":17,"./hdprivatekey":22,"./networks":25,"./publickey":28,"./util/buffer":46,"./util/js":47,"./util/preconditions":48,"assert":64,"buffer":118,"lodash":192}],24:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var PrivateKey = require('./privatekey');
 var PublicKey = require('./publickey');
 var Address = require('./address');
@@ -5083,9 +5083,9 @@ Message.prototype.inspect = function() {
 module.exports = Message;
 
 }).call(this,require("buffer").Buffer)
-},{"./address":1,"./crypto/ecdsa":7,"./crypto/hash":8,"./crypto/signature":11,"./encoding/bufferwriter":15,"./privatekey":27,"./publickey":28,"./util/js":47,"./util/preconditions":48,"buffer":118,"logobyte":192}],25:[function(require,module,exports){
+},{"./address":1,"./crypto/ecdsa":7,"./crypto/hash":8,"./crypto/signature":11,"./encoding/bufferwriter":15,"./privatekey":27,"./publickey":28,"./util/js":47,"./util/preconditions":48,"buffer":118,"lodash":192}],25:[function(require,module,exports){
 'use strict';
-var _ = require('logobyte');
+var _ = require('lodash');
 
 var BufferUtil = require('./util/buffer');
 var JSUtil = require('./util/js');
@@ -5351,11 +5351,11 @@ module.exports = {
   disableRegtest: disableRegtest
 };
 
-},{"./util/buffer":46,"./util/js":47,"logobyte":192}],26:[function(require,module,exports){
+},{"./util/buffer":46,"./util/js":47,"lodash":192}],26:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 var BufferUtil = require('./util/buffer');
 var JSUtil = require('./util/js');
@@ -5603,11 +5603,11 @@ Opcode.prototype.inspect = function() {
 module.exports = Opcode;
 
 }).call(this,require("buffer").Buffer)
-},{"./util/buffer":46,"./util/js":47,"./util/preconditions":48,"buffer":118,"logobyte":192}],27:[function(require,module,exports){
+},{"./util/buffer":46,"./util/js":47,"./util/preconditions":48,"buffer":118,"lodash":192}],27:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var Address = require('./address');
 var Base58Check = require('./encoding/base58check');
 var BN = require('./crypto/bn');
@@ -6007,7 +6007,7 @@ PrivateKey.prototype.inspect = function() {
 module.exports = PrivateKey;
 
 }).call(this,require("buffer").Buffer)
-},{"./address":1,"./crypto/bn":6,"./crypto/point":9,"./crypto/random":10,"./encoding/base58check":13,"./networks":25,"./publickey":28,"./util/js":47,"./util/preconditions":48,"buffer":118,"logobyte":192}],28:[function(require,module,exports){
+},{"./address":1,"./crypto/bn":6,"./crypto/point":9,"./crypto/random":10,"./encoding/base58check":13,"./networks":25,"./publickey":28,"./util/js":47,"./util/preconditions":48,"buffer":118,"lodash":192}],28:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -6016,7 +6016,7 @@ var Point = require('./crypto/point');
 var Hash = require('./crypto/hash');
 var JSUtil = require('./util/js');
 var Network = require('./networks');
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('./util/preconditions');
 
 /**
@@ -6404,7 +6404,7 @@ PublicKey.prototype.inspect = function() {
 module.exports = PublicKey;
 
 }).call(this,require("buffer").Buffer)
-},{"./address":1,"./crypto/bn":6,"./crypto/hash":8,"./crypto/point":9,"./networks":25,"./privatekey":27,"./util/js":47,"./util/preconditions":48,"buffer":118,"logobyte":192}],29:[function(require,module,exports){
+},{"./address":1,"./crypto/bn":6,"./crypto/hash":8,"./crypto/point":9,"./networks":25,"./privatekey":27,"./util/js":47,"./util/preconditions":48,"buffer":118,"lodash":192}],29:[function(require,module,exports){
 module.exports = require('./script');
 
 module.exports.Interpreter = require('./interpreter');
@@ -6413,7 +6413,7 @@ module.exports.Interpreter = require('./interpreter');
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 
 var Script = require('./script');
 var Opcode = require('../opcode');
@@ -7678,7 +7678,7 @@ Interpreter.prototype.step = function() {
 
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":6,"../crypto/hash":8,"../crypto/signature":11,"../opcode":26,"../publickey":28,"../transaction":32,"./script":31,"buffer":118,"logobyte":192}],31:[function(require,module,exports){
+},{"../crypto/bn":6,"../crypto/hash":8,"../crypto/signature":11,"../opcode":26,"../publickey":28,"../transaction":32,"./script":31,"buffer":118,"lodash":192}],31:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -7691,7 +7691,7 @@ var PublicKey = require('../publickey');
 var Signature = require('../crypto/signature');
 var Networks = require('../networks');
 var $ = require('../util/preconditions');
-var _ = require('logobyte');
+var _ = require('lodash');
 var errors = require('../errors');
 var buffer = require('buffer');
 var BufferUtil = require('../util/buffer');
@@ -8766,7 +8766,7 @@ Script.prototype.getSignatureOperationsCount = function(accurate) {
 module.exports = Script;
 
 }).call(this,require("buffer").Buffer)
-},{"../address":1,"../crypto/hash":8,"../crypto/signature":11,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../errors":17,"../networks":25,"../opcode":26,"../publickey":28,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"buffer":118,"logobyte":192}],32:[function(require,module,exports){
+},{"../address":1,"../crypto/hash":8,"../crypto/signature":11,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../errors":17,"../networks":25,"../opcode":26,"../publickey":28,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"buffer":118,"lodash":192}],32:[function(require,module,exports){
 module.exports = require('./transaction');
 
 module.exports.Input = require('./input');
@@ -8786,7 +8786,7 @@ module.exports.MultiSigScriptHash = require('./multisigscripthash.js');
 },{"./input":34,"./multisig.js":35,"./multisigscripthash.js":36,"./publickey":37,"./publickeyhash":38}],34:[function(require,module,exports){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('../../util/preconditions');
 var errors = require('../../errors');
 var BufferWriter = require('../../encoding/bufferwriter');
@@ -8981,10 +8981,10 @@ Input.prototype._estimateSize = function() {
 
 module.exports = Input;
 
-},{"../../encoding/bufferwriter":15,"../../errors":17,"../../script":29,"../../util/buffer":46,"../../util/js":47,"../../util/preconditions":48,"../output":39,"../sighash":40,"buffer":118,"logobyte":192}],35:[function(require,module,exports){
+},{"../../encoding/bufferwriter":15,"../../errors":17,"../../script":29,"../../util/buffer":46,"../../util/js":47,"../../util/preconditions":48,"../output":39,"../sighash":40,"buffer":118,"lodash":192}],35:[function(require,module,exports){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var inherits = require('inherits');
 var Transaction = require('../transaction');
 var Input = require('./input');
@@ -9194,10 +9194,10 @@ MultiSigInput.prototype._estimateSize = function() {
 
 module.exports = MultiSigInput;
 
-},{"../../crypto/signature":11,"../../publickey":28,"../../script":29,"../../util/buffer":46,"../../util/preconditions":48,"../output":39,"../sighash":40,"../signature":41,"../transaction":42,"./input":34,"inherits":189,"logobyte":192}],36:[function(require,module,exports){
+},{"../../crypto/signature":11,"../../publickey":28,"../../script":29,"../../util/buffer":46,"../../util/preconditions":48,"../output":39,"../sighash":40,"../signature":41,"../transaction":42,"./input":34,"inherits":189,"lodash":192}],36:[function(require,module,exports){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var inherits = require('inherits');
 var Input = require('./input');
 var Output = require('../output');
@@ -9362,7 +9362,7 @@ MultiSigScriptHashInput.prototype._estimateSize = function() {
 
 module.exports = MultiSigScriptHashInput;
 
-},{"../../crypto/signature":11,"../../publickey":28,"../../script":29,"../../util/buffer":46,"../../util/preconditions":48,"../output":39,"../sighash":40,"../signature":41,"./input":34,"inherits":189,"logobyte":192}],37:[function(require,module,exports){
+},{"../../crypto/signature":11,"../../publickey":28,"../../script":29,"../../util/buffer":46,"../../util/preconditions":48,"../output":39,"../sighash":40,"../signature":41,"./input":34,"inherits":189,"lodash":192}],37:[function(require,module,exports){
 'use strict';
 
 var inherits = require('inherits');
@@ -9553,7 +9553,7 @@ module.exports = PublicKeyHashInput;
 },{"../../crypto/hash":8,"../../crypto/signature":11,"../../script":29,"../../util/buffer":46,"../../util/preconditions":48,"../output":39,"../sighash":40,"../signature":41,"./input":34,"inherits":189}],39:[function(require,module,exports){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var BN = require('../crypto/bn');
 var buffer = require('buffer');
 var bufferUtil = require('../util/buffer');
@@ -9720,7 +9720,7 @@ Output.prototype.toBufferWriter = function(writer) {
 
 module.exports = Output;
 
-},{"../crypto/bn":6,"../encoding/bufferwriter":15,"../errors":17,"../script":29,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"buffer":118,"logobyte":192}],40:[function(require,module,exports){
+},{"../crypto/bn":6,"../encoding/bufferwriter":15,"../errors":17,"../script":29,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"buffer":118,"lodash":192}],40:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -9735,7 +9735,7 @@ var BN = require('../crypto/bn');
 var Hash = require('../crypto/hash');
 var ECDSA = require('../crypto/ecdsa');
 var $ = require('../util/preconditions');
-var _ = require('logobyte');
+var _ = require('lodash');
 
 var SIGHASH_SINGLE_BUG = '0000000000000000000000000000000000000000000000000000000000000001';
 var BITS_64_ON = 'ffffffffffffffff';
@@ -9860,11 +9860,11 @@ module.exports = {
 };
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/bn":6,"../crypto/ecdsa":7,"../crypto/hash":8,"../crypto/signature":11,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../script":29,"../util/preconditions":48,"./input":33,"./output":39,"./transaction":42,"buffer":118,"logobyte":192}],41:[function(require,module,exports){
+},{"../crypto/bn":6,"../crypto/ecdsa":7,"../crypto/hash":8,"../crypto/signature":11,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../script":29,"../util/preconditions":48,"./input":33,"./output":39,"./transaction":42,"buffer":118,"lodash":192}],41:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var inherits = require('inherits');
 var BufferUtil = require('../util/buffer');
@@ -9953,11 +9953,11 @@ TransactionSignature.fromObject = function(object) {
 module.exports = TransactionSignature;
 
 }).call(this,require("buffer").Buffer)
-},{"../crypto/signature":11,"../errors":17,"../publickey":28,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"buffer":118,"inherits":189,"logobyte":192}],42:[function(require,module,exports){
+},{"../crypto/signature":11,"../errors":17,"../publickey":28,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"buffer":118,"inherits":189,"lodash":192}],42:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var buffer = require('buffer');
 var compare = Buffer.compare || require('buffer-compare');
@@ -10924,7 +10924,7 @@ Transaction.prototype.sort = function() {
 
 /**
  * Randomize this transaction's outputs ordering. The shuffling algorithm is a
- * version of the Fisher-Yates shuffle, provided by logobyte's _.shuffle().
+ * version of the Fisher-Yates shuffle, provided by lodash's _.shuffle().
  *
  * @return {Transaction} this
  */
@@ -11187,10 +11187,10 @@ Transaction.prototype.enableRBF = function() {
 module.exports = Transaction;
 
 }).call(this,require("buffer").Buffer)
-},{"../address":1,"../crypto/bn":6,"../crypto/hash":8,"../crypto/signature":11,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../errors":17,"../privatekey":27,"../script":29,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"./input":33,"./output":39,"./sighash":40,"./unspentoutput":43,"buffer":118,"buffer-compare":116,"logobyte":192}],43:[function(require,module,exports){
+},{"../address":1,"../crypto/bn":6,"../crypto/hash":8,"../crypto/signature":11,"../encoding/bufferreader":14,"../encoding/bufferwriter":15,"../errors":17,"../privatekey":27,"../script":29,"../util/buffer":46,"../util/js":47,"../util/preconditions":48,"./input":33,"./output":39,"./sighash":40,"./unspentoutput":43,"buffer":118,"buffer-compare":116,"lodash":192}],43:[function(require,module,exports){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var $ = require('../util/preconditions');
 var JSUtil = require('../util/js');
 
@@ -11289,10 +11289,10 @@ UnspentOutput.prototype.toObject = UnspentOutput.prototype.toJSON = function toO
 
 module.exports = UnspentOutput;
 
-},{"../address":1,"../script":29,"../unit":44,"../util/js":47,"../util/preconditions":48,"logobyte":192}],44:[function(require,module,exports){
+},{"../address":1,"../script":29,"../unit":44,"../util/js":47,"../util/preconditions":48,"lodash":192}],44:[function(require,module,exports){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 
 var errors = require('./errors');
 var $ = require('./util/preconditions');
@@ -11529,10 +11529,10 @@ Unit.prototype.inspect = function() {
 
 module.exports = Unit;
 
-},{"./errors":17,"./util/preconditions":48,"logobyte":192}],45:[function(require,module,exports){
+},{"./errors":17,"./util/preconditions":48,"lodash":192}],45:[function(require,module,exports){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 var URL = require('url');
 
 var Address = require('./address');
@@ -11754,7 +11754,7 @@ URI.prototype.inspect = function() {
 
 module.exports = URI;
 
-},{"./address":1,"./unit":44,"logobyte":192,"url":256}],46:[function(require,module,exports){
+},{"./address":1,"./unit":44,"lodash":192,"url":256}],46:[function(require,module,exports){
 (function (Buffer){
 'use strict';
 
@@ -11938,7 +11938,7 @@ module.exports.EMPTY_BUFFER = new Buffer(0);
 },{"./js":47,"./preconditions":48,"assert":64,"buffer":118}],47:[function(require,module,exports){
 'use strict';
 
-var _ = require('logobyte');
+var _ = require('lodash');
 
 /**
  * Determines whether a string contains only hexadecimal values
@@ -12021,11 +12021,11 @@ module.exports = {
   }
 };
 
-},{"logobyte":192}],48:[function(require,module,exports){
+},{"lodash":192}],48:[function(require,module,exports){
 'use strict';
 
 var errors = require('../errors');
-var _ = require('logobyte');
+var _ = require('lodash');
 
 module.exports = {
   checkState: function(condition, message) {
@@ -12057,7 +12057,7 @@ module.exports = {
   }
 };
 
-},{"../errors":17,"buffer":118,"logobyte":192}],49:[function(require,module,exports){
+},{"../errors":17,"buffer":118,"lodash":192}],49:[function(require,module,exports){
 var asn1 = exports;
 
 asn1.bignum = require('bn.js');
@@ -34622,9 +34622,9 @@ module.exports = Array.isArray || function (arr) {
 (function (global){
 /**
  * @license
- * Logobyte <https://logobyte.com/>
+ * lodash <https://lodash.com/>
  * Copyright JS Foundation and other contributors <https://js.foundation/>
- * Released under MIT license <https://logobyte.com/license>
+ * Released under MIT license <https://lodash.com/license>
  * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
  * Copyright Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
  */
@@ -34644,13 +34644,13 @@ module.exports = Array.isArray || function (arr) {
       FUNC_ERROR_TEXT = 'Expected a function';
 
   /** Used to stand-in for `undefined` hash values. */
-  var HASH_UNDEFINED = '__logobyte_hash_undefined__';
+  var HASH_UNDEFINED = '__lodash_hash_undefined__';
 
   /** Used as the maximum memoize cache size. */
   var MAX_MEMOIZE_SIZE = 500;
 
   /** Used as the internal argument placeholder. */
-  var PLACEHOLDER = '__logobyte_placeholder__';
+  var PLACEHOLDER = '__lodash_placeholder__';
 
   /** Used to compose bitmasks for cloning. */
   var CLONE_DEEP_FLAG = 1,
@@ -36018,29 +36018,29 @@ module.exports = Array.isArray || function (arr) {
   /*--------------------------------------------------------------------------*/
 
   /**
-   * Create a new pristine `logobyte` function using the `context` object.
+   * Create a new pristine `lodash` function using the `context` object.
    *
    * @static
    * @memberOf _
    * @since 1.1.0
    * @category Util
    * @param {Object} [context=root] The context object.
-   * @returns {Function} Returns a new `logobyte` function.
+   * @returns {Function} Returns a new `lodash` function.
    * @example
    *
    * _.mixin({ 'foo': _.constant('foo') });
    *
-   * var logobyte = _.runInContext();
-   * logobyte.mixin({ 'bar': logobyte.constant('bar') });
+   * var lodash = _.runInContext();
+   * lodash.mixin({ 'bar': lodash.constant('bar') });
    *
    * _.isFunction(_.foo);
    * // => true
    * _.isFunction(_.bar);
    * // => false
    *
-   * logobyte.isFunction(logobyte.foo);
+   * lodash.isFunction(lodash.foo);
    * // => false
-   * logobyte.isFunction(logobyte.bar);
+   * lodash.isFunction(lodash.bar);
    * // => true
    *
    * // Create a suped-up `defer` in Node.js.
@@ -36128,7 +36128,7 @@ module.exports = Array.isArray || function (arr) {
         ctxNow = Date && Date.now !== root.Date.now && Date.now,
         ctxSetTimeout = context.setTimeout !== root.setTimeout && context.setTimeout;
 
-    /* Built-in method references for those with the same name as other `logobyte` methods. */
+    /* Built-in method references for those with the same name as other `lodash` methods. */
     var nativeCeil = Math.ceil,
         nativeFloor = Math.floor,
         nativeGetSymbols = Object.getOwnPropertySymbols,
@@ -36172,7 +36172,7 @@ module.exports = Array.isArray || function (arr) {
     /*------------------------------------------------------------------------*/
 
     /**
-     * Creates a `logobyte` object which wraps `value` to enable implicit method
+     * Creates a `lodash` object which wraps `value` to enable implicit method
      * chain sequences. Methods that operate on and return arrays, collections,
      * and functions can be chained together. Methods that retrieve a single value
      * or may return a primitive value will automatically end the chain sequence
@@ -36196,7 +36196,7 @@ module.exports = Array.isArray || function (arr) {
      * Chaining is supported in custom builds as long as the `_#value` method is
      * directly or indirectly included in the build.
      *
-     * In addition to logobyte methods, wrappers have `Array` and `String` methods.
+     * In addition to lodash methods, wrappers have `Array` and `String` methods.
      *
      * The wrapper `Array` methods are:
      * `concat`, `join`, `pop`, `push`, `shift`, `sort`, `splice`, and `unshift`
@@ -36265,8 +36265,8 @@ module.exports = Array.isArray || function (arr) {
      * @name _
      * @constructor
      * @category Seq
-     * @param {*} value The value to wrap in a `logobyte` instance.
-     * @returns {Object} Returns the new `logobyte` wrapper instance.
+     * @param {*} value The value to wrap in a `lodash` instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * function square(n) {
@@ -36288,16 +36288,16 @@ module.exports = Array.isArray || function (arr) {
      * _.isArray(squares.value());
      * // => true
      */
-    function logobyte(value) {
+    function lodash(value) {
       if (isObjectLike(value) && !isArray(value) && !(value instanceof LazyWrapper)) {
-        if (value instanceof LogobyteWrapper) {
+        if (value instanceof lodashWrapper) {
           return value;
         }
         if (hasOwnProperty.call(value, '__wrapped__')) {
           return wrapperClone(value);
         }
       }
-      return new LogobyteWrapper(value);
+      return new lodashWrapper(value);
     }
 
     /**
@@ -36329,18 +36329,18 @@ module.exports = Array.isArray || function (arr) {
      *
      * @private
      */
-    function baseLogobyte() {
+    function baselodash() {
       // No operation performed.
     }
 
     /**
-     * The base constructor for creating `logobyte` wrapper objects.
+     * The base constructor for creating `lodash` wrapper objects.
      *
      * @private
      * @param {*} value The value to wrap.
      * @param {boolean} [chainAll] Enable explicit method chain sequences.
      */
-    function LogobyteWrapper(value, chainAll) {
+    function lodashWrapper(value, chainAll) {
       this.__wrapped__ = value;
       this.__actions__ = [];
       this.__chain__ = !!chainAll;
@@ -36349,7 +36349,7 @@ module.exports = Array.isArray || function (arr) {
     }
 
     /**
-     * By default, the template delimiters used by logobyte are like those in
+     * By default, the template delimiters used by lodash are like those in
      * embedded Ruby (ERB). Change the following template settings to use
      * alternative delimiters.
      *
@@ -36357,7 +36357,7 @@ module.exports = Array.isArray || function (arr) {
      * @memberOf _
      * @type {Object}
      */
-    logobyte.templateSettings = {
+    lodash.templateSettings = {
 
       /**
        * Used to detect `data` property values to be HTML-escaped.
@@ -36400,21 +36400,21 @@ module.exports = Array.isArray || function (arr) {
       'imports': {
 
         /**
-         * A reference to the `logobyte` function.
+         * A reference to the `lodash` function.
          *
          * @memberOf _.templateSettings.imports
          * @type {Function}
          */
-        '_': logobyte
+        '_': lodash
       }
     };
 
-    // Ensure wrappers are instances of `baseLogobyte`.
-    logobyte.prototype = baseLogobyte.prototype;
-    logobyte.prototype.constructor = logobyte;
+    // Ensure wrappers are instances of `baselodash`.
+    lodash.prototype = baselodash.prototype;
+    lodash.prototype.constructor = lodash;
 
-    LogobyteWrapper.prototype = baseCreate(baseLogobyte.prototype);
-    LogobyteWrapper.prototype.constructor = LogobyteWrapper;
+    lodashWrapper.prototype = baseCreate(baselodash.prototype);
+    lodashWrapper.prototype.constructor = lodashWrapper;
 
     /*------------------------------------------------------------------------*/
 
@@ -36532,8 +36532,8 @@ module.exports = Array.isArray || function (arr) {
       return result;
     }
 
-    // Ensure `LazyWrapper` is an instance of `baseLogobyte`.
-    LazyWrapper.prototype = baseCreate(baseLogobyte.prototype);
+    // Ensure `LazyWrapper` is an instance of `baselodash`.
+    LazyWrapper.prototype = baseCreate(baselodash.prototype);
     LazyWrapper.prototype.constructor = LazyWrapper;
 
     /*------------------------------------------------------------------------*/
@@ -39766,7 +39766,7 @@ module.exports = Array.isArray || function (arr) {
       return flatRest(function(funcs) {
         var length = funcs.length,
             index = length,
-            prereq = LogobyteWrapper.prototype.thru;
+            prereq = lodashWrapper.prototype.thru;
 
         if (fromRight) {
           funcs.reverse();
@@ -39777,7 +39777,7 @@ module.exports = Array.isArray || function (arr) {
             throw new TypeError(FUNC_ERROR_TEXT);
           }
           if (prereq && !wrapper && getFuncName(func) == 'wrapper') {
-            var wrapper = new LogobyteWrapper([], true);
+            var wrapper = new lodashWrapper([], true);
           }
         }
         index = wrapper ? index : length;
@@ -40543,7 +40543,7 @@ module.exports = Array.isArray || function (arr) {
      * @returns {*} Returns the placeholder value.
      */
     function getHolder(func) {
-      var object = hasOwnProperty.call(logobyte, 'placeholder') ? logobyte : func;
+      var object = hasOwnProperty.call(lodash, 'placeholder') ? lodash : func;
       return object.placeholder;
     }
 
@@ -40559,7 +40559,7 @@ module.exports = Array.isArray || function (arr) {
      * @returns {Function} Returns the chosen function or its result.
      */
     function getIteratee() {
-      var result = logobyte.iteratee || iteratee;
+      var result = lodash.iteratee || iteratee;
       result = result === iteratee ? baseIteratee : result;
       return arguments.length ? result(arguments[0], arguments[1]) : result;
     }
@@ -40964,7 +40964,7 @@ module.exports = Array.isArray || function (arr) {
      */
     function isLaziable(func) {
       var funcName = getFuncName(func),
-          other = logobyte[funcName];
+          other = lodash[funcName];
 
       if (typeof other != 'function' || !(funcName in LazyWrapper.prototype)) {
         return false;
@@ -41437,7 +41437,7 @@ module.exports = Array.isArray || function (arr) {
       if (wrapper instanceof LazyWrapper) {
         return wrapper.clone();
       }
-      var result = new LogobyteWrapper(wrapper.__wrapped__, wrapper.__chain__);
+      var result = new lodashWrapper(wrapper.__wrapped__, wrapper.__chain__);
       result.__actions__ = copyArray(wrapper.__actions__);
       result.__index__  = wrapper.__index__;
       result.__values__ = wrapper.__values__;
@@ -43337,7 +43337,7 @@ module.exports = Array.isArray || function (arr) {
     /*------------------------------------------------------------------------*/
 
     /**
-     * Creates a `logobyte` wrapper instance that wraps `value` with explicit method
+     * Creates a `lodash` wrapper instance that wraps `value` with explicit method
      * chain sequences enabled. The result of such sequences must be unwrapped
      * with `_#value`.
      *
@@ -43346,7 +43346,7 @@ module.exports = Array.isArray || function (arr) {
      * @since 1.3.0
      * @category Seq
      * @param {*} value The value to wrap.
-     * @returns {Object} Returns the new `logobyte` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var users = [
@@ -43366,7 +43366,7 @@ module.exports = Array.isArray || function (arr) {
      * // => 'pebbles is 1'
      */
     function chain(value) {
-      var result = logobyte(value);
+      var result = lodash(value);
       result.__chain__ = true;
       return result;
     }
@@ -43434,7 +43434,7 @@ module.exports = Array.isArray || function (arr) {
      * @since 1.0.0
      * @category Seq
      * @param {...(string|string[])} [paths] The property paths to pick.
-     * @returns {Object} Returns the new `logobyte` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var object = { 'a': [{ 'b': { 'c': 3 } }, 4] };
@@ -43458,7 +43458,7 @@ module.exports = Array.isArray || function (arr) {
         'args': [interceptor],
         'thisArg': undefined
       });
-      return new LogobyteWrapper(value, this.__chain__).thru(function(array) {
+      return new lodashWrapper(value, this.__chain__).thru(function(array) {
         if (length && !array.length) {
           array.push(undefined);
         }
@@ -43467,13 +43467,13 @@ module.exports = Array.isArray || function (arr) {
     });
 
     /**
-     * Creates a `logobyte` wrapper instance with explicit method chain sequences enabled.
+     * Creates a `lodash` wrapper instance with explicit method chain sequences enabled.
      *
      * @name chain
      * @memberOf _
      * @since 0.1.0
      * @category Seq
-     * @returns {Object} Returns the new `logobyte` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var users = [
@@ -43504,7 +43504,7 @@ module.exports = Array.isArray || function (arr) {
      * @memberOf _
      * @since 3.2.0
      * @category Seq
-     * @returns {Object} Returns the new `logobyte` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var array = [1, 2];
@@ -43524,7 +43524,7 @@ module.exports = Array.isArray || function (arr) {
      * // => [1, 2, 3]
      */
     function wrapperCommit() {
-      return new LogobyteWrapper(this.value(), this.__chain__);
+      return new lodashWrapper(this.value(), this.__chain__);
     }
 
     /**
@@ -43589,7 +43589,7 @@ module.exports = Array.isArray || function (arr) {
      * @since 3.2.0
      * @category Seq
      * @param {*} value The value to plant.
-     * @returns {Object} Returns the new `logobyte` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * function square(n) {
@@ -43609,7 +43609,7 @@ module.exports = Array.isArray || function (arr) {
       var result,
           parent = this;
 
-      while (parent instanceof baseLogobyte) {
+      while (parent instanceof baselodash) {
         var clone = wrapperClone(parent);
         clone.__index__ = 0;
         clone.__values__ = undefined;
@@ -43634,7 +43634,7 @@ module.exports = Array.isArray || function (arr) {
      * @memberOf _
      * @since 0.1.0
      * @category Seq
-     * @returns {Object} Returns the new `logobyte` wrapper instance.
+     * @returns {Object} Returns the new `lodash` wrapper instance.
      * @example
      *
      * var array = [1, 2, 3];
@@ -43658,7 +43658,7 @@ module.exports = Array.isArray || function (arr) {
           'args': [reverse],
           'thisArg': undefined
         });
-        return new LogobyteWrapper(wrapped, this.__chain__);
+        return new lodashWrapper(wrapped, this.__chain__);
       }
       return this.thru(reverse);
     }
@@ -44143,7 +44143,7 @@ module.exports = Array.isArray || function (arr) {
      * `iteratee`. The iteratee is invoked with three arguments:
      * (value, index|key, collection).
      *
-     * Many logobyte methods are guarded to work as iteratees for methods like
+     * Many lodash methods are guarded to work as iteratees for methods like
      * `_.every`, `_.filter`, `_.map`, `_.mapValues`, `_.reject`, and `_.some`.
      *
      * The guarded methods are:
@@ -44276,7 +44276,7 @@ module.exports = Array.isArray || function (arr) {
      * value. The iteratee is invoked with four arguments:
      * (accumulator, value, index|key, collection).
      *
-     * Many logobyte methods are guarded to work as iteratees for methods like
+     * Many lodash methods are guarded to work as iteratees for methods like
      * `_.reduce`, `_.reduceRight`, and `_.transform`.
      *
      * The guarded methods are:
@@ -48861,8 +48861,8 @@ module.exports = Array.isArray || function (arr) {
      * @returns {string} Returns the escaped string.
      * @example
      *
-     * _.escapeRegExp('[logobyte](https://logobyte.com/)');
-     * // => '\[logobyte\]\(https://logobyte\.com/\)'
+     * _.escapeRegExp('[lodash](https://lodash.com/)');
+     * // => '\[lodash\]\(https://lodash\.com/\)'
      */
     function escapeRegExp(string) {
       string = toString(string);
@@ -49266,7 +49266,7 @@ module.exports = Array.isArray || function (arr) {
      * for easier debugging.
      *
      * For more information on precompiling templates see
-     * [logobyte's custom builds documentation](https://logobyte.com/custom-builds).
+     * [lodash's custom builds documentation](https://lodash.com/custom-builds).
      *
      * For more information on Chrome extension sandboxes see
      * [Chrome's extensions documentation](https://developer.chrome.com/extensions/sandboxingEval).
@@ -49285,7 +49285,7 @@ module.exports = Array.isArray || function (arr) {
      *  An object to import into the template as free variables.
      * @param {RegExp} [options.interpolate=_.templateSettings.interpolate]
      *  The "interpolate" delimiter.
-     * @param {string} [options.sourceURL='logobyte.templateSources[n]']
+     * @param {string} [options.sourceURL='lodash.templateSources[n]']
      *  The sourceURL of the compiled template.
      * @param {string} [options.variable='obj']
      *  The data object variable name.
@@ -49362,7 +49362,7 @@ module.exports = Array.isArray || function (arr) {
       // Based on John Resig's `tmpl` implementation
       // (http://ejohn.org/blog/javascript-micro-templating/)
       // and Laura Doktorova's doT.js (https://github.com/olado/doT).
-      var settings = logobyte.templateSettings;
+      var settings = lodash.templateSettings;
 
       if (guard && isIterateeCall(string, options, guard)) {
         options = undefined;
@@ -49392,7 +49392,7 @@ module.exports = Array.isArray || function (arr) {
       var sourceURL = '//# sourceURL=' +
         ('sourceURL' in options
           ? options.sourceURL
-          : ('logobyte.templateSources[' + (++templateCounter) + ']')
+          : ('lodash.templateSources[' + (++templateCounter) + ']')
         ) + '\n';
 
       string.replace(reDelimiters, function(match, escapeValue, interpolateValue, esTemplateValue, evaluateValue, offset) {
@@ -50244,14 +50244,14 @@ module.exports = Array.isArray || function (arr) {
      * object to the destination object. If `object` is a function, then methods
      * are added to its prototype as well.
      *
-     * **Note:** Use `_.runInContext` to create a pristine `logobyte` function to
+     * **Note:** Use `_.runInContext` to create a pristine `lodash` function to
      * avoid conflicts caused by modifying the original.
      *
      * @static
      * @since 0.1.0
      * @memberOf _
      * @category Util
-     * @param {Function|Object} [object=logobyte] The destination object.
+     * @param {Function|Object} [object=lodash] The destination object.
      * @param {Object} source The object of functions to add.
      * @param {Object} [options={}] The options object.
      * @param {boolean} [options.chain=true] Specify whether mixins are chainable.
@@ -50313,16 +50313,16 @@ module.exports = Array.isArray || function (arr) {
 
     /**
      * Reverts the `_` variable to its previous value and returns a reference to
-     * the `logobyte` function.
+     * the `lodash` function.
      *
      * @static
      * @since 0.1.0
      * @memberOf _
      * @category Util
-     * @returns {Function} Returns the `logobyte` function.
+     * @returns {Function} Returns the `lodash` function.
      * @example
      *
-     * var logobyte = _.noConflict();
+     * var lodash = _.noConflict();
      */
     function noConflict() {
       if (root._ === this) {
@@ -51108,327 +51108,327 @@ module.exports = Array.isArray || function (arr) {
     /*------------------------------------------------------------------------*/
 
     // Add methods that return wrapped values in chain sequences.
-    logobyte.after = after;
-    logobyte.ary = ary;
-    logobyte.assign = assign;
-    logobyte.assignIn = assignIn;
-    logobyte.assignInWith = assignInWith;
-    logobyte.assignWith = assignWith;
-    logobyte.at = at;
-    logobyte.before = before;
-    logobyte.bind = bind;
-    logobyte.bindAll = bindAll;
-    logobyte.bindKey = bindKey;
-    logobyte.castArray = castArray;
-    logobyte.chain = chain;
-    logobyte.chunk = chunk;
-    logobyte.compact = compact;
-    logobyte.concat = concat;
-    logobyte.cond = cond;
-    logobyte.conforms = conforms;
-    logobyte.constant = constant;
-    logobyte.countBy = countBy;
-    logobyte.create = create;
-    logobyte.curry = curry;
-    logobyte.curryRight = curryRight;
-    logobyte.debounce = debounce;
-    logobyte.defaults = defaults;
-    logobyte.defaultsDeep = defaultsDeep;
-    logobyte.defer = defer;
-    logobyte.delay = delay;
-    logobyte.difference = difference;
-    logobyte.differenceBy = differenceBy;
-    logobyte.differenceWith = differenceWith;
-    logobyte.drop = drop;
-    logobyte.dropRight = dropRight;
-    logobyte.dropRightWhile = dropRightWhile;
-    logobyte.dropWhile = dropWhile;
-    logobyte.fill = fill;
-    logobyte.filter = filter;
-    logobyte.flatMap = flatMap;
-    logobyte.flatMapDeep = flatMapDeep;
-    logobyte.flatMapDepth = flatMapDepth;
-    logobyte.flatten = flatten;
-    logobyte.flattenDeep = flattenDeep;
-    logobyte.flattenDepth = flattenDepth;
-    logobyte.flip = flip;
-    logobyte.flow = flow;
-    logobyte.flowRight = flowRight;
-    logobyte.fromPairs = fromPairs;
-    logobyte.functions = functions;
-    logobyte.functionsIn = functionsIn;
-    logobyte.groupBy = groupBy;
-    logobyte.initial = initial;
-    logobyte.intersection = intersection;
-    logobyte.intersectionBy = intersectionBy;
-    logobyte.intersectionWith = intersectionWith;
-    logobyte.invert = invert;
-    logobyte.invertBy = invertBy;
-    logobyte.invokeMap = invokeMap;
-    logobyte.iteratee = iteratee;
-    logobyte.keyBy = keyBy;
-    logobyte.keys = keys;
-    logobyte.keysIn = keysIn;
-    logobyte.map = map;
-    logobyte.mapKeys = mapKeys;
-    logobyte.mapValues = mapValues;
-    logobyte.matches = matches;
-    logobyte.matchesProperty = matchesProperty;
-    logobyte.memoize = memoize;
-    logobyte.merge = merge;
-    logobyte.mergeWith = mergeWith;
-    logobyte.method = method;
-    logobyte.methodOf = methodOf;
-    logobyte.mixin = mixin;
-    logobyte.negate = negate;
-    logobyte.nthArg = nthArg;
-    logobyte.omit = omit;
-    logobyte.omitBy = omitBy;
-    logobyte.once = once;
-    logobyte.orderBy = orderBy;
-    logobyte.over = over;
-    logobyte.overArgs = overArgs;
-    logobyte.overEvery = overEvery;
-    logobyte.overSome = overSome;
-    logobyte.partial = partial;
-    logobyte.partialRight = partialRight;
-    logobyte.partition = partition;
-    logobyte.pick = pick;
-    logobyte.pickBy = pickBy;
-    logobyte.property = property;
-    logobyte.propertyOf = propertyOf;
-    logobyte.pull = pull;
-    logobyte.pullAll = pullAll;
-    logobyte.pullAllBy = pullAllBy;
-    logobyte.pullAllWith = pullAllWith;
-    logobyte.pullAt = pullAt;
-    logobyte.range = range;
-    logobyte.rangeRight = rangeRight;
-    logobyte.rearg = rearg;
-    logobyte.reject = reject;
-    logobyte.remove = remove;
-    logobyte.rest = rest;
-    logobyte.reverse = reverse;
-    logobyte.sampleSize = sampleSize;
-    logobyte.set = set;
-    logobyte.setWith = setWith;
-    logobyte.shuffle = shuffle;
-    logobyte.slice = slice;
-    logobyte.sortBy = sortBy;
-    logobyte.sortedUniq = sortedUniq;
-    logobyte.sortedUniqBy = sortedUniqBy;
-    logobyte.split = split;
-    logobyte.spread = spread;
-    logobyte.tail = tail;
-    logobyte.take = take;
-    logobyte.takeRight = takeRight;
-    logobyte.takeRightWhile = takeRightWhile;
-    logobyte.takeWhile = takeWhile;
-    logobyte.tap = tap;
-    logobyte.throttle = throttle;
-    logobyte.thru = thru;
-    logobyte.toArray = toArray;
-    logobyte.toPairs = toPairs;
-    logobyte.toPairsIn = toPairsIn;
-    logobyte.toPath = toPath;
-    logobyte.toPlainObject = toPlainObject;
-    logobyte.transform = transform;
-    logobyte.unary = unary;
-    logobyte.union = union;
-    logobyte.unionBy = unionBy;
-    logobyte.unionWith = unionWith;
-    logobyte.uniq = uniq;
-    logobyte.uniqBy = uniqBy;
-    logobyte.uniqWith = uniqWith;
-    logobyte.unset = unset;
-    logobyte.unzip = unzip;
-    logobyte.unzipWith = unzipWith;
-    logobyte.update = update;
-    logobyte.updateWith = updateWith;
-    logobyte.values = values;
-    logobyte.valuesIn = valuesIn;
-    logobyte.without = without;
-    logobyte.words = words;
-    logobyte.wrap = wrap;
-    logobyte.xor = xor;
-    logobyte.xorBy = xorBy;
-    logobyte.xorWith = xorWith;
-    logobyte.zip = zip;
-    logobyte.zipObject = zipObject;
-    logobyte.zipObjectDeep = zipObjectDeep;
-    logobyte.zipWith = zipWith;
+    lodash.after = after;
+    lodash.ary = ary;
+    lodash.assign = assign;
+    lodash.assignIn = assignIn;
+    lodash.assignInWith = assignInWith;
+    lodash.assignWith = assignWith;
+    lodash.at = at;
+    lodash.before = before;
+    lodash.bind = bind;
+    lodash.bindAll = bindAll;
+    lodash.bindKey = bindKey;
+    lodash.castArray = castArray;
+    lodash.chain = chain;
+    lodash.chunk = chunk;
+    lodash.compact = compact;
+    lodash.concat = concat;
+    lodash.cond = cond;
+    lodash.conforms = conforms;
+    lodash.constant = constant;
+    lodash.countBy = countBy;
+    lodash.create = create;
+    lodash.curry = curry;
+    lodash.curryRight = curryRight;
+    lodash.debounce = debounce;
+    lodash.defaults = defaults;
+    lodash.defaultsDeep = defaultsDeep;
+    lodash.defer = defer;
+    lodash.delay = delay;
+    lodash.difference = difference;
+    lodash.differenceBy = differenceBy;
+    lodash.differenceWith = differenceWith;
+    lodash.drop = drop;
+    lodash.dropRight = dropRight;
+    lodash.dropRightWhile = dropRightWhile;
+    lodash.dropWhile = dropWhile;
+    lodash.fill = fill;
+    lodash.filter = filter;
+    lodash.flatMap = flatMap;
+    lodash.flatMapDeep = flatMapDeep;
+    lodash.flatMapDepth = flatMapDepth;
+    lodash.flatten = flatten;
+    lodash.flattenDeep = flattenDeep;
+    lodash.flattenDepth = flattenDepth;
+    lodash.flip = flip;
+    lodash.flow = flow;
+    lodash.flowRight = flowRight;
+    lodash.fromPairs = fromPairs;
+    lodash.functions = functions;
+    lodash.functionsIn = functionsIn;
+    lodash.groupBy = groupBy;
+    lodash.initial = initial;
+    lodash.intersection = intersection;
+    lodash.intersectionBy = intersectionBy;
+    lodash.intersectionWith = intersectionWith;
+    lodash.invert = invert;
+    lodash.invertBy = invertBy;
+    lodash.invokeMap = invokeMap;
+    lodash.iteratee = iteratee;
+    lodash.keyBy = keyBy;
+    lodash.keys = keys;
+    lodash.keysIn = keysIn;
+    lodash.map = map;
+    lodash.mapKeys = mapKeys;
+    lodash.mapValues = mapValues;
+    lodash.matches = matches;
+    lodash.matchesProperty = matchesProperty;
+    lodash.memoize = memoize;
+    lodash.merge = merge;
+    lodash.mergeWith = mergeWith;
+    lodash.method = method;
+    lodash.methodOf = methodOf;
+    lodash.mixin = mixin;
+    lodash.negate = negate;
+    lodash.nthArg = nthArg;
+    lodash.omit = omit;
+    lodash.omitBy = omitBy;
+    lodash.once = once;
+    lodash.orderBy = orderBy;
+    lodash.over = over;
+    lodash.overArgs = overArgs;
+    lodash.overEvery = overEvery;
+    lodash.overSome = overSome;
+    lodash.partial = partial;
+    lodash.partialRight = partialRight;
+    lodash.partition = partition;
+    lodash.pick = pick;
+    lodash.pickBy = pickBy;
+    lodash.property = property;
+    lodash.propertyOf = propertyOf;
+    lodash.pull = pull;
+    lodash.pullAll = pullAll;
+    lodash.pullAllBy = pullAllBy;
+    lodash.pullAllWith = pullAllWith;
+    lodash.pullAt = pullAt;
+    lodash.range = range;
+    lodash.rangeRight = rangeRight;
+    lodash.rearg = rearg;
+    lodash.reject = reject;
+    lodash.remove = remove;
+    lodash.rest = rest;
+    lodash.reverse = reverse;
+    lodash.sampleSize = sampleSize;
+    lodash.set = set;
+    lodash.setWith = setWith;
+    lodash.shuffle = shuffle;
+    lodash.slice = slice;
+    lodash.sortBy = sortBy;
+    lodash.sortedUniq = sortedUniq;
+    lodash.sortedUniqBy = sortedUniqBy;
+    lodash.split = split;
+    lodash.spread = spread;
+    lodash.tail = tail;
+    lodash.take = take;
+    lodash.takeRight = takeRight;
+    lodash.takeRightWhile = takeRightWhile;
+    lodash.takeWhile = takeWhile;
+    lodash.tap = tap;
+    lodash.throttle = throttle;
+    lodash.thru = thru;
+    lodash.toArray = toArray;
+    lodash.toPairs = toPairs;
+    lodash.toPairsIn = toPairsIn;
+    lodash.toPath = toPath;
+    lodash.toPlainObject = toPlainObject;
+    lodash.transform = transform;
+    lodash.unary = unary;
+    lodash.union = union;
+    lodash.unionBy = unionBy;
+    lodash.unionWith = unionWith;
+    lodash.uniq = uniq;
+    lodash.uniqBy = uniqBy;
+    lodash.uniqWith = uniqWith;
+    lodash.unset = unset;
+    lodash.unzip = unzip;
+    lodash.unzipWith = unzipWith;
+    lodash.update = update;
+    lodash.updateWith = updateWith;
+    lodash.values = values;
+    lodash.valuesIn = valuesIn;
+    lodash.without = without;
+    lodash.words = words;
+    lodash.wrap = wrap;
+    lodash.xor = xor;
+    lodash.xorBy = xorBy;
+    lodash.xorWith = xorWith;
+    lodash.zip = zip;
+    lodash.zipObject = zipObject;
+    lodash.zipObjectDeep = zipObjectDeep;
+    lodash.zipWith = zipWith;
 
     // Add aliases.
-    logobyte.entries = toPairs;
-    logobyte.entriesIn = toPairsIn;
-    logobyte.extend = assignIn;
-    logobyte.extendWith = assignInWith;
+    lodash.entries = toPairs;
+    lodash.entriesIn = toPairsIn;
+    lodash.extend = assignIn;
+    lodash.extendWith = assignInWith;
 
-    // Add methods to `logobyte.prototype`.
-    mixin(logobyte, logobyte);
+    // Add methods to `lodash.prototype`.
+    mixin(lodash, lodash);
 
     /*------------------------------------------------------------------------*/
 
     // Add methods that return unwrapped values in chain sequences.
-    logobyte.add = add;
-    logobyte.attempt = attempt;
-    logobyte.camelCase = camelCase;
-    logobyte.capitalize = capitalize;
-    logobyte.ceil = ceil;
-    logobyte.clamp = clamp;
-    logobyte.clone = clone;
-    logobyte.cloneDeep = cloneDeep;
-    logobyte.cloneDeepWith = cloneDeepWith;
-    logobyte.cloneWith = cloneWith;
-    logobyte.conformsTo = conformsTo;
-    logobyte.deburr = deburr;
-    logobyte.defaultTo = defaultTo;
-    logobyte.divide = divide;
-    logobyte.endsWith = endsWith;
-    logobyte.eq = eq;
-    logobyte.escape = escape;
-    logobyte.escapeRegExp = escapeRegExp;
-    logobyte.every = every;
-    logobyte.find = find;
-    logobyte.findIndex = findIndex;
-    logobyte.findKey = findKey;
-    logobyte.findLast = findLast;
-    logobyte.findLastIndex = findLastIndex;
-    logobyte.findLastKey = findLastKey;
-    logobyte.floor = floor;
-    logobyte.forEach = forEach;
-    logobyte.forEachRight = forEachRight;
-    logobyte.forIn = forIn;
-    logobyte.forInRight = forInRight;
-    logobyte.forOwn = forOwn;
-    logobyte.forOwnRight = forOwnRight;
-    logobyte.get = get;
-    logobyte.gt = gt;
-    logobyte.gte = gte;
-    logobyte.has = has;
-    logobyte.hasIn = hasIn;
-    logobyte.head = head;
-    logobyte.identity = identity;
-    logobyte.includes = includes;
-    logobyte.indexOf = indexOf;
-    logobyte.inRange = inRange;
-    logobyte.invoke = invoke;
-    logobyte.isArguments = isArguments;
-    logobyte.isArray = isArray;
-    logobyte.isArrayBuffer = isArrayBuffer;
-    logobyte.isArrayLike = isArrayLike;
-    logobyte.isArrayLikeObject = isArrayLikeObject;
-    logobyte.isBoolean = isBoolean;
-    logobyte.isBuffer = isBuffer;
-    logobyte.isDate = isDate;
-    logobyte.isElement = isElement;
-    logobyte.isEmpty = isEmpty;
-    logobyte.isEqual = isEqual;
-    logobyte.isEqualWith = isEqualWith;
-    logobyte.isError = isError;
-    logobyte.isFinite = isFinite;
-    logobyte.isFunction = isFunction;
-    logobyte.isInteger = isInteger;
-    logobyte.isLength = isLength;
-    logobyte.isMap = isMap;
-    logobyte.isMatch = isMatch;
-    logobyte.isMatchWith = isMatchWith;
-    logobyte.isNaN = isNaN;
-    logobyte.isNative = isNative;
-    logobyte.isNil = isNil;
-    logobyte.isNull = isNull;
-    logobyte.isNumber = isNumber;
-    logobyte.isObject = isObject;
-    logobyte.isObjectLike = isObjectLike;
-    logobyte.isPlainObject = isPlainObject;
-    logobyte.isRegExp = isRegExp;
-    logobyte.isSafeInteger = isSafeInteger;
-    logobyte.isSet = isSet;
-    logobyte.isString = isString;
-    logobyte.isSymbol = isSymbol;
-    logobyte.isTypedArray = isTypedArray;
-    logobyte.isUndefined = isUndefined;
-    logobyte.isWeakMap = isWeakMap;
-    logobyte.isWeakSet = isWeakSet;
-    logobyte.join = join;
-    logobyte.kebabCase = kebabCase;
-    logobyte.last = last;
-    logobyte.lastIndexOf = lastIndexOf;
-    logobyte.lowerCase = lowerCase;
-    logobyte.lowerFirst = lowerFirst;
-    logobyte.lt = lt;
-    logobyte.lte = lte;
-    logobyte.max = max;
-    logobyte.maxBy = maxBy;
-    logobyte.mean = mean;
-    logobyte.meanBy = meanBy;
-    logobyte.min = min;
-    logobyte.minBy = minBy;
-    logobyte.stubArray = stubArray;
-    logobyte.stubFalse = stubFalse;
-    logobyte.stubObject = stubObject;
-    logobyte.stubString = stubString;
-    logobyte.stubTrue = stubTrue;
-    logobyte.multiply = multiply;
-    logobyte.nth = nth;
-    logobyte.noConflict = noConflict;
-    logobyte.noop = noop;
-    logobyte.now = now;
-    logobyte.pad = pad;
-    logobyte.padEnd = padEnd;
-    logobyte.padStart = padStart;
-    logobyte.parseInt = parseInt;
-    logobyte.random = random;
-    logobyte.reduce = reduce;
-    logobyte.reduceRight = reduceRight;
-    logobyte.repeat = repeat;
-    logobyte.replace = replace;
-    logobyte.result = result;
-    logobyte.round = round;
-    logobyte.runInContext = runInContext;
-    logobyte.sample = sample;
-    logobyte.size = size;
-    logobyte.snakeCase = snakeCase;
-    logobyte.some = some;
-    logobyte.sortedIndex = sortedIndex;
-    logobyte.sortedIndexBy = sortedIndexBy;
-    logobyte.sortedIndexOf = sortedIndexOf;
-    logobyte.sortedLastIndex = sortedLastIndex;
-    logobyte.sortedLastIndexBy = sortedLastIndexBy;
-    logobyte.sortedLastIndexOf = sortedLastIndexOf;
-    logobyte.startCase = startCase;
-    logobyte.startsWith = startsWith;
-    logobyte.subtract = subtract;
-    logobyte.sum = sum;
-    logobyte.sumBy = sumBy;
-    logobyte.template = template;
-    logobyte.times = times;
-    logobyte.toFinite = toFinite;
-    logobyte.toInteger = toInteger;
-    logobyte.toLength = toLength;
-    logobyte.toLower = toLower;
-    logobyte.toNumber = toNumber;
-    logobyte.toSafeInteger = toSafeInteger;
-    logobyte.toString = toString;
-    logobyte.toUpper = toUpper;
-    logobyte.trim = trim;
-    logobyte.trimEnd = trimEnd;
-    logobyte.trimStart = trimStart;
-    logobyte.truncate = truncate;
-    logobyte.unescape = unescape;
-    logobyte.uniqueId = uniqueId;
-    logobyte.upperCase = upperCase;
-    logobyte.upperFirst = upperFirst;
+    lodash.add = add;
+    lodash.attempt = attempt;
+    lodash.camelCase = camelCase;
+    lodash.capitalize = capitalize;
+    lodash.ceil = ceil;
+    lodash.clamp = clamp;
+    lodash.clone = clone;
+    lodash.cloneDeep = cloneDeep;
+    lodash.cloneDeepWith = cloneDeepWith;
+    lodash.cloneWith = cloneWith;
+    lodash.conformsTo = conformsTo;
+    lodash.deburr = deburr;
+    lodash.defaultTo = defaultTo;
+    lodash.divide = divide;
+    lodash.endsWith = endsWith;
+    lodash.eq = eq;
+    lodash.escape = escape;
+    lodash.escapeRegExp = escapeRegExp;
+    lodash.every = every;
+    lodash.find = find;
+    lodash.findIndex = findIndex;
+    lodash.findKey = findKey;
+    lodash.findLast = findLast;
+    lodash.findLastIndex = findLastIndex;
+    lodash.findLastKey = findLastKey;
+    lodash.floor = floor;
+    lodash.forEach = forEach;
+    lodash.forEachRight = forEachRight;
+    lodash.forIn = forIn;
+    lodash.forInRight = forInRight;
+    lodash.forOwn = forOwn;
+    lodash.forOwnRight = forOwnRight;
+    lodash.get = get;
+    lodash.gt = gt;
+    lodash.gte = gte;
+    lodash.has = has;
+    lodash.hasIn = hasIn;
+    lodash.head = head;
+    lodash.identity = identity;
+    lodash.includes = includes;
+    lodash.indexOf = indexOf;
+    lodash.inRange = inRange;
+    lodash.invoke = invoke;
+    lodash.isArguments = isArguments;
+    lodash.isArray = isArray;
+    lodash.isArrayBuffer = isArrayBuffer;
+    lodash.isArrayLike = isArrayLike;
+    lodash.isArrayLikeObject = isArrayLikeObject;
+    lodash.isBoolean = isBoolean;
+    lodash.isBuffer = isBuffer;
+    lodash.isDate = isDate;
+    lodash.isElement = isElement;
+    lodash.isEmpty = isEmpty;
+    lodash.isEqual = isEqual;
+    lodash.isEqualWith = isEqualWith;
+    lodash.isError = isError;
+    lodash.isFinite = isFinite;
+    lodash.isFunction = isFunction;
+    lodash.isInteger = isInteger;
+    lodash.isLength = isLength;
+    lodash.isMap = isMap;
+    lodash.isMatch = isMatch;
+    lodash.isMatchWith = isMatchWith;
+    lodash.isNaN = isNaN;
+    lodash.isNative = isNative;
+    lodash.isNil = isNil;
+    lodash.isNull = isNull;
+    lodash.isNumber = isNumber;
+    lodash.isObject = isObject;
+    lodash.isObjectLike = isObjectLike;
+    lodash.isPlainObject = isPlainObject;
+    lodash.isRegExp = isRegExp;
+    lodash.isSafeInteger = isSafeInteger;
+    lodash.isSet = isSet;
+    lodash.isString = isString;
+    lodash.isSymbol = isSymbol;
+    lodash.isTypedArray = isTypedArray;
+    lodash.isUndefined = isUndefined;
+    lodash.isWeakMap = isWeakMap;
+    lodash.isWeakSet = isWeakSet;
+    lodash.join = join;
+    lodash.kebabCase = kebabCase;
+    lodash.last = last;
+    lodash.lastIndexOf = lastIndexOf;
+    lodash.lowerCase = lowerCase;
+    lodash.lowerFirst = lowerFirst;
+    lodash.lt = lt;
+    lodash.lte = lte;
+    lodash.max = max;
+    lodash.maxBy = maxBy;
+    lodash.mean = mean;
+    lodash.meanBy = meanBy;
+    lodash.min = min;
+    lodash.minBy = minBy;
+    lodash.stubArray = stubArray;
+    lodash.stubFalse = stubFalse;
+    lodash.stubObject = stubObject;
+    lodash.stubString = stubString;
+    lodash.stubTrue = stubTrue;
+    lodash.multiply = multiply;
+    lodash.nth = nth;
+    lodash.noConflict = noConflict;
+    lodash.noop = noop;
+    lodash.now = now;
+    lodash.pad = pad;
+    lodash.padEnd = padEnd;
+    lodash.padStart = padStart;
+    lodash.parseInt = parseInt;
+    lodash.random = random;
+    lodash.reduce = reduce;
+    lodash.reduceRight = reduceRight;
+    lodash.repeat = repeat;
+    lodash.replace = replace;
+    lodash.result = result;
+    lodash.round = round;
+    lodash.runInContext = runInContext;
+    lodash.sample = sample;
+    lodash.size = size;
+    lodash.snakeCase = snakeCase;
+    lodash.some = some;
+    lodash.sortedIndex = sortedIndex;
+    lodash.sortedIndexBy = sortedIndexBy;
+    lodash.sortedIndexOf = sortedIndexOf;
+    lodash.sortedLastIndex = sortedLastIndex;
+    lodash.sortedLastIndexBy = sortedLastIndexBy;
+    lodash.sortedLastIndexOf = sortedLastIndexOf;
+    lodash.startCase = startCase;
+    lodash.startsWith = startsWith;
+    lodash.subtract = subtract;
+    lodash.sum = sum;
+    lodash.sumBy = sumBy;
+    lodash.template = template;
+    lodash.times = times;
+    lodash.toFinite = toFinite;
+    lodash.toInteger = toInteger;
+    lodash.toLength = toLength;
+    lodash.toLower = toLower;
+    lodash.toNumber = toNumber;
+    lodash.toSafeInteger = toSafeInteger;
+    lodash.toString = toString;
+    lodash.toUpper = toUpper;
+    lodash.trim = trim;
+    lodash.trimEnd = trimEnd;
+    lodash.trimStart = trimStart;
+    lodash.truncate = truncate;
+    lodash.unescape = unescape;
+    lodash.uniqueId = uniqueId;
+    lodash.upperCase = upperCase;
+    lodash.upperFirst = upperFirst;
 
     // Add aliases.
-    logobyte.each = forEach;
-    logobyte.eachRight = forEachRight;
-    logobyte.first = head;
+    lodash.each = forEach;
+    lodash.eachRight = forEachRight;
+    lodash.first = head;
 
-    mixin(logobyte, (function() {
+    mixin(lodash, (function() {
       var source = {};
-      baseForOwn(logobyte, function(func, methodName) {
-        if (!hasOwnProperty.call(logobyte.prototype, methodName)) {
+      baseForOwn(lodash, function(func, methodName) {
+        if (!hasOwnProperty.call(lodash.prototype, methodName)) {
           source[methodName] = func;
         }
       });
@@ -51444,11 +51444,11 @@ module.exports = Array.isArray || function (arr) {
      * @memberOf _
      * @type {string}
      */
-    logobyte.VERSION = VERSION;
+    lodash.VERSION = VERSION;
 
     // Assign default placeholders.
     arrayEach(['bind', 'bindKey', 'curry', 'curryRight', 'partial', 'partialRight'], function(methodName) {
-      logobyte[methodName].placeholder = logobyte;
+      lodash[methodName].placeholder = lodash;
     });
 
     // Add `LazyWrapper` methods for `_.drop` and `_.take` variants.
@@ -51563,17 +51563,17 @@ module.exports = Array.isArray || function (arr) {
       return this.take(MAX_ARRAY_LENGTH);
     };
 
-    // Add `LazyWrapper` methods to `logobyte.prototype`.
+    // Add `LazyWrapper` methods to `lodash.prototype`.
     baseForOwn(LazyWrapper.prototype, function(func, methodName) {
       var checkIteratee = /^(?:filter|find|map|reject)|While$/.test(methodName),
           isTaker = /^(?:head|last)$/.test(methodName),
-          logobyteFunc = logobyte[isTaker ? ('take' + (methodName == 'last' ? 'Right' : '')) : methodName],
+          lodashFunc = lodash[isTaker ? ('take' + (methodName == 'last' ? 'Right' : '')) : methodName],
           retUnwrapped = isTaker || /^find/.test(methodName);
 
-      if (!logobyteFunc) {
+      if (!lodashFunc) {
         return;
       }
-      logobyte.prototype[methodName] = function() {
+      lodash.prototype[methodName] = function() {
         var value = this.__wrapped__,
             args = isTaker ? [1] : arguments,
             isLazy = value instanceof LazyWrapper,
@@ -51581,7 +51581,7 @@ module.exports = Array.isArray || function (arr) {
             useLazy = isLazy || isArray(value);
 
         var interceptor = function(value) {
-          var result = logobyteFunc.apply(logobyte, arrayPush([value], args));
+          var result = lodashFunc.apply(lodash, arrayPush([value], args));
           return (isTaker && chainAll) ? result[0] : result;
         };
 
@@ -51598,7 +51598,7 @@ module.exports = Array.isArray || function (arr) {
           value = onlyLazy ? value : new LazyWrapper(this);
           var result = func.apply(value, args);
           result.__actions__.push({ 'func': thru, 'args': [interceptor], 'thisArg': undefined });
-          return new LogobyteWrapper(result, chainAll);
+          return new lodashWrapper(result, chainAll);
         }
         if (isUnwrapped && onlyLazy) {
           return func.apply(this, args);
@@ -51608,13 +51608,13 @@ module.exports = Array.isArray || function (arr) {
       };
     });
 
-    // Add `Array` methods to `logobyte.prototype`.
+    // Add `Array` methods to `lodash.prototype`.
     arrayEach(['pop', 'push', 'shift', 'sort', 'splice', 'unshift'], function(methodName) {
       var func = arrayProto[methodName],
           chainName = /^(?:push|sort|unshift)$/.test(methodName) ? 'tap' : 'thru',
           retUnwrapped = /^(?:pop|shift)$/.test(methodName);
 
-      logobyte.prototype[methodName] = function() {
+      lodash.prototype[methodName] = function() {
         var args = arguments;
         if (retUnwrapped && !this.__chain__) {
           var value = this.value();
@@ -51628,12 +51628,12 @@ module.exports = Array.isArray || function (arr) {
 
     // Map minified method names to their real names.
     baseForOwn(LazyWrapper.prototype, function(func, methodName) {
-      var logobyteFunc = logobyte[methodName];
-      if (logobyteFunc) {
-        var key = (logobyteFunc.name + ''),
+      var lodashFunc = lodash[methodName];
+      if (lodashFunc) {
+        var key = (lodashFunc.name + ''),
             names = realNames[key] || (realNames[key] = []);
 
-        names.push({ 'name': methodName, 'func': logobyteFunc });
+        names.push({ 'name': methodName, 'func': lodashFunc });
       }
     });
 
@@ -51647,35 +51647,35 @@ module.exports = Array.isArray || function (arr) {
     LazyWrapper.prototype.reverse = lazyReverse;
     LazyWrapper.prototype.value = lazyValue;
 
-    // Add chain sequence methods to the `logobyte` wrapper.
-    logobyte.prototype.at = wrapperAt;
-    logobyte.prototype.chain = wrapperChain;
-    logobyte.prototype.commit = wrapperCommit;
-    logobyte.prototype.next = wrapperNext;
-    logobyte.prototype.plant = wrapperPlant;
-    logobyte.prototype.reverse = wrapperReverse;
-    logobyte.prototype.toJSON = logobyte.prototype.valueOf = logobyte.prototype.value = wrapperValue;
+    // Add chain sequence methods to the `lodash` wrapper.
+    lodash.prototype.at = wrapperAt;
+    lodash.prototype.chain = wrapperChain;
+    lodash.prototype.commit = wrapperCommit;
+    lodash.prototype.next = wrapperNext;
+    lodash.prototype.plant = wrapperPlant;
+    lodash.prototype.reverse = wrapperReverse;
+    lodash.prototype.toJSON = lodash.prototype.valueOf = lodash.prototype.value = wrapperValue;
 
     // Add lazy aliases.
-    logobyte.prototype.first = logobyte.prototype.head;
+    lodash.prototype.first = lodash.prototype.head;
 
     if (symIterator) {
-      logobyte.prototype[symIterator] = wrapperToIterator;
+      lodash.prototype[symIterator] = wrapperToIterator;
     }
-    return logobyte;
+    return lodash;
   });
 
   /*--------------------------------------------------------------------------*/
 
-  // Export logobyte.
+  // Export lodash.
   var _ = runInContext();
 
   // Some AMD build optimizers, like r.js, check for condition patterns like:
   if (typeof define == 'function' && typeof define.amd == 'object' && define.amd) {
-    // Expose Logobyte on the global object to prevent errors when Logobyte is
+    // Expose lodash on the global object to prevent errors when lodash is
     // loaded by a script tag in the presence of an AMD loader.
     // See http://requirejs.org/docs/errors.html#mismatch for more details.
-    // Use `_.noConflict` to remove Logobyte from the global object.
+    // Use `_.noConflict` to remove lodash from the global object.
     root._ = _;
 
     // Define as an anonymous module so, through path mapping, it can be
@@ -66732,7 +66732,7 @@ module.exports={
     "buffer-compare": "=1.0.0",
     "elliptic": "=3.0.3",
     "inherits": "=2.0.1",
-    "logobyte": "=4.17.1",
+    "lodash": "=4.17.1",
     "sha512": "=0.0.1",
     "x11-hash-js": "^1.0.0"
   },
