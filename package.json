@@ -104,7 +104,7 @@
     "lodash": "=4.17.1",
     "sha512": "=0.0.1",
     "x11-hash-js": "^1.0.0",
-    "node-quark-hash": "https://github.com/apollomatheus/node-quark-hash"
+    "quark-hash": "https://github.com/apollomatheus/node-quark-hash"
   },
   "devDependencies": {
     "bitcore-build-gobyte": "gobytecoin/bitcore-build-gobyte",
