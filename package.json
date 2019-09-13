@@ -86,12 +86,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/gobytecoin/bitcore-lib-gobyte.git"
+    "url": "https://github.com/apollomatheus/bitcore-lib-gobyte.git"
   },
   "bugs": {
-    "url": "https://github.com/gobytecoin/bitcore-lib-gobyte/issues"
+    "url": "https://github.com/apollomatheus/bitcore-lib-gobyte/issues"
   },
-  "homepage": "https://github.com/gobytecoin/bitcore-lib-gobyte",
+  "homepage": "https://github.com/apollomatheus/bitcore-lib-gobyte",
   "browser": {
     "request": "browser-request"
   },
@@ -103,7 +103,8 @@
     "inherits": "=2.0.1",
     "lodash": "=4.17.1",
     "sha512": "=0.0.1",
-    "x11-hash-js": "^1.0.0"
+    "x11-hash-js": "^1.0.0",
+    "node-quark-hash": "https://github.com/apollomatheus/node-quark-hash"
   },
   "devDependencies": {
     "bitcore-build-gobyte": "gobytecoin/bitcore-build-gobyte",
